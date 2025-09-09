@@ -2,15 +2,11 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage, FieldArray, type FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import styles from './AddRecipeForm.module.css';
-import type { Recipe } from "../../types/types.ts";
+import type {AddRecipeFormProps, Recipe} from "../../types/types.ts";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch } from "../../redux/store.ts";
 import { selectIsLoading } from "../../redux/recipes/selectors.ts";
 import { addRecipeThunk } from "../../redux/recipes/operations.ts";
-
-interface AddRecipeFormProps {
-    onClose: () => void;
-}
 
 const validationSchema = Yup.object({
     name: Yup.string()

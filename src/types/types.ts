@@ -32,3 +32,7 @@ export interface AddRecipeFormValues {
     recipes:Recipe[]
 
 }
+
+export interface AddRecipeFormProps {
+    onClose: () => void;
+}
