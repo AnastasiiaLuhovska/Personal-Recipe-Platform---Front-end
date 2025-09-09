@@ -158,7 +158,7 @@ const AddRecipeForm: React.FC<AddRecipeFormProps> = ({ onClose }) => {
                                 <FieldArray name="ingredients">
                                     {({ remove, push }) => (
                                         <div>
-                                            {values.ingredients.map((ingredient, index) => (
+                                            {values.ingredients.map((_, index) => (
                                                 <div key={index} className={styles.arrayItem}>
                                                     <Field
                                                         name={`ingredients.${index}`}
