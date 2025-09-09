@@ -1,7 +1,6 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {instance} from "../../api/api.ts";
 import type {LoginFormValues, RegisterFormValues} from "../../types/types.ts";
-import toast from 'react-hot-toast';
 import {AxiosError} from "axios";
 
 const addToken = (token:string) => {
