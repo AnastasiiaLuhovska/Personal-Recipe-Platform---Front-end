@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import {authReducer} from "./auth/slice.ts";
+import {recipesReducer} from "./recipes/slice.ts";
 
 
  const store = configureStore({
     reducer:{
-        auth: authReducer
+        auth: authReducer,
+        recipes: recipesReducer
     }
 })
 

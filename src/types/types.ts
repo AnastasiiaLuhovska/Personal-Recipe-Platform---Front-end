@@ -11,7 +11,24 @@ export interface LoginFormValues {
 }
 
 export interface InitialState{
-    error: null| boolean,
+    error: string | null,
     isLoading: boolean,
-    isLoggedIn: boolean
+    isLoggedIn: boolean,
+    isRefreshing:boolean
+}
+
+export interface Recipe{
+    name: string;
+    description: string;
+    cookTime: number;
+    servings: number;
+    difficulty: 'Easy' | 'Medium' | 'Hard';
+    ingredients: string[];
+    instructions: string;
+}
+export interface AddRecipeFormValues {
+    error: string | null,
+    isLoading: boolean,
+    recipes:Recipe[]
+
 }
