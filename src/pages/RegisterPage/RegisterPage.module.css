@@ -1,0 +1,176 @@
+
+
+.registerWrapper {
+    min-height: calc(100vh - 68px);
+    background-color: var(--second-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.registerCard {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+@media screen and (min-width: 768px) {
+    .registerCard {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .registerCard {
+        padding: 32px;
+        margin: 0 12px;
+        border-radius: 12px;
+        max-width: none;
+    }
+}
+
+.registerHeader {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.registerTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0 0 8px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .registerTitle {
+        font-size: 28px;
+    }
+}
+
+.registerSubtitle {
+    font-size: 16px;
+    color: var(--black);
+    opacity: 0.7;
+    margin: 0;
+}
+
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    margin: 0;
+}
+
+.input {
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--black);
+    background-color: white;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input::placeholder {
+    color: #9ca3af;
+}
+
+.errorMessage {
+    font-size: 12px;
+    color: #ef4444;
+    margin: 0;
+    min-height: 16px;
+}
+
+.submitButton {
+    padding: 14px 24px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.submitButton:hover:not(:disabled) {
+    background-color: var(--blue);
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.submitButton:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submitButtonDisabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #9ca3af;
+    transform: none;
+    box-shadow: none;
+}
+
+.submitButtonDisabled:hover {
+    opacity: 0.5;
+    transform: none;
+    box-shadow: none;
+}
+
+.registerFooter {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.loginText {
+    font-size: 14px;
+    color: var(--black);
+    opacity: 0.7;
+    margin: 0;
+}
+
+.loginLink {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.loginLink:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}

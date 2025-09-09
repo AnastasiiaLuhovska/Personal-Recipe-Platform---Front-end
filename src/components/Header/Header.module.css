@@ -3,8 +3,8 @@
     border-bottom: 1px solid var(--second-white);
     padding: 24px 10px;
     height: 68px;
+    background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    background-color: var(--white);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -22,7 +22,6 @@
     align-items: center;
     height: 100%;
 }
-
 
 .logo {
     flex-shrink: 0;
@@ -56,6 +55,7 @@
     display: flex;
     gap: 32px;
     color: var(--black);
+    align-items: center;
 }
 
 .navLink {
@@ -82,6 +82,76 @@
     color: var(--blue);
 }
 
+.authButton {
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.authButton:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Настройки и выпадающее меню */
+.settingsContainer {
+    position: relative;
+}
+
+.settingsButton {
+    background: none;
+    border: none;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.settingsButton:hover {
+    color: var(--blue);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.logoutButton {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px 16px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--black);
+    transition: background-color 0.2s ease;
+}
+
+.logoutButton:hover {
+    background-color: #f3f4f6;
+    color: #ef4444;
+}
+
 .navLink {
     text-decoration: none;
     color: var(--black);
@@ -101,7 +171,6 @@
 .navLink:active {
     transform: translateY(1px);
 }
-
 
 .navLink.active {
     color: var(--blue);
