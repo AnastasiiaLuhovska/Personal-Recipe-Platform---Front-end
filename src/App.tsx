@@ -1,4 +1,3 @@
-
 import './App.css'
 import {Route, Routes} from "react-router";
 import SharedLayout from "./pages/SharedLayout.tsx";
@@ -9,9 +8,9 @@ import RestrictedRoute from "./routes/RestrictedRoute.tsx";
 import PrivateRoute from './routes/PrivateRoute.tsx';
 import {useDispatch, useSelector} from "react-redux";
 import {refreshThunk} from "./redux/auth/operations.ts";
-import type{AppDispatch} from "./redux/store.ts";
-import { selectIsRefreshing} from "./redux/auth/selectors.ts";
-import { Toaster } from 'react-hot-toast';
+import type {AppDispatch} from "./redux/store.ts";
+import {selectIsLoggedIn, selectIsRefreshing} from "./redux/auth/selectors.ts";
+import {Toaster} from 'react-hot-toast';
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.tsx"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage.tsx"));
@@ -24,29 +23,32 @@ const NotFoundPage = lazy(
 
 function App() {
 
-  const isRefreshing = useSelector(selectIsRefreshing);
-  const dispatch = useDispatch<AppDispatch>();
+    const isRefreshing = useSelector(selectIsRefreshing);
+    const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  useEffect(() => {
+    const dispatch = useDispatch<AppDispatch>();
 
-      dispatch(refreshThunk());
-      }, [dispatch]);
+    useEffect(() => {
+        if (isLoggedIn) {
+            dispatch(refreshThunk());
+        }
+    }, [dispatch]);
 
-  if (isRefreshing) return null;
+    if (isRefreshing) return null;
 
-  return <>
-    <Toaster position="top-right" />
-    <Routes>
-      <Route element={<SharedLayout/>}>
-        <Route path='/login' element={    <RestrictedRoute><LoginPage/></RestrictedRoute>}/>
-        <Route path='/register' element={ <RestrictedRoute><RegisterPage/></RestrictedRoute>}/>
-        <Route path='/' element={<PrivateRoute><HomePage/></PrivateRoute>}/>
-        <Route path='/catalog' element={<PrivateRoute><CatalogPage/></PrivateRoute>}/>
-        {/*<Route path='/catalog/:id' element={<PrivateRoute><DescriptionPage/></PrivateRoute>}/>*/}
-        <Route path="*" element={<NotFoundPage/>} />
-      </Route>
-    </Routes>
-  </>
+    return <>
+        <Toaster position="top-right"/>
+        <Routes>
+            <Route element={<SharedLayout/>}>
+                <Route path='/login' element={<RestrictedRoute><LoginPage/></RestrictedRoute>}/>
+                <Route path='/register' element={<RestrictedRoute><RegisterPage/></RestrictedRoute>}/>
+                <Route path='/' element={<PrivateRoute><HomePage/></PrivateRoute>}/>
+                <Route path='/catalog' element={<PrivateRoute><CatalogPage/></PrivateRoute>}/>
+                {/*<Route path='/catalog/:id' element={<PrivateRoute><DescriptionPage/></PrivateRoute>}/>*/}
+                <Route path="*" element={<NotFoundPage/>}/>
+            </Route>
+        </Routes>
+    </>
 
 }
 
