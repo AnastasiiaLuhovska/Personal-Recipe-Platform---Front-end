@@ -16,7 +16,7 @@ const SearchBar: React.FC = () => {
     return (
         <div className={styles.catalogWrapper}>
             <div className="container">
-                <h1>Browse Recipes</h1>
+                <h2>Browse Recipes</h2>
 
                 <form onSubmit={handleSearch} className={styles.searchForm}>
                     <input

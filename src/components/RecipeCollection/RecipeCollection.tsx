@@ -25,7 +25,8 @@ const RecipeCollection = () => {
                     ))}
                 </div>
             </div>
-        ) : (
+        ) :
+            (
             <h2>Nothing here yet</h2>
         )
     );

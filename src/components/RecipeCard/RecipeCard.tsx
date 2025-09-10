@@ -13,11 +13,11 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
             <div className={styles.info}>
                 <div className={styles.time}>
                     <span className={styles.icon}>⏱️</span>
-                    <span>{recipe.cookTime} мин</span>
+                    <span>{recipe.cookTime} min</span>
                 </div>
                 <div className={styles.servings}>
                     <span className={styles.icon}>🍽️</span>
-                    <span>{recipe.servings} порций</span>
+                    <span>{recipe.servings} portions</span>
                 </div>
             </div>
         </div>
