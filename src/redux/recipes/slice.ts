@@ -1,6 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
 import type {AddRecipeFormValues} from "../../types/types.ts";
 import {searchRecipesThunk, addRecipeThunk} from "./operations.ts";
+import {logoutThunk} from "../auth/operations.ts";
 
 
 const initialState:AddRecipeFormValues = {
@@ -37,6 +38,8 @@ const slice = createSlice({
                 state.error = action.payload as string;
                 state.isLoading = false;
             })
+            .addCase(logoutThunk.fulfilled, () => initialState
+            )
 
     }
 });
