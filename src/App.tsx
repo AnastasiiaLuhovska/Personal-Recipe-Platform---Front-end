@@ -32,7 +32,7 @@ function App() {
         if (isLoggedIn) {
             dispatch(refreshThunk());
         }
-    }, [dispatch]);
+    }, [dispatch, isLoggedIn]);
 
     if (isRefreshing) return null;
 

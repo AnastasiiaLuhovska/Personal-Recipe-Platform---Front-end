@@ -4,14 +4,19 @@ import {recipesReducer} from "./recipes/slice.ts";
 import {
     persistStore,
     persistReducer,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 const persistConfig = {
-    key: "root",
+    key: "auth",
     version: 1,
     storage,
-    whitelist: ["isLoggedIn"],
 };
 
 const persistedReducer = persistReducer(persistConfig, authReducer);
@@ -20,7 +25,13 @@ const persistedReducer = persistReducer(persistConfig, authReducer);
     reducer:{
         auth: persistedReducer,
         recipes: recipesReducer
-    }
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+            },
+        }),
 })
 
 export default store
