@@ -42,7 +42,7 @@ function App() {
             <Route element={<SharedLayout/>}>
                 <Route path='/login' element={<RestrictedRoute><LoginPage/></RestrictedRoute>}/>
                 <Route path='/register' element={<RestrictedRoute><RegisterPage/></RestrictedRoute>}/>
-                <Route path='/' element={<PrivateRoute><HomePage/></PrivateRoute>}/>
+                <Route path='/' element={<HomePage/>}/>
                 <Route path='/catalog' element={<PrivateRoute><CatalogPage/></PrivateRoute>}/>
                 {/*<Route path='/catalog/:id' element={<PrivateRoute><DescriptionPage/></PrivateRoute>}/>*/}
                 <Route path="*" element={<NotFoundPage/>}/>

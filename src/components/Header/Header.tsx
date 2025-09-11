@@ -30,6 +30,9 @@ const Header: React.FC = () => {
                     </div>
 
                     <nav className={styles.navWrapper}>
+                        <NavLink to="/" className={styles.navLink}>
+                            Home
+                        </NavLink>
                         {location.pathname === '/register' ? (
                             <NavLink to="/login" className={styles.authButton}>
                                 Sign In

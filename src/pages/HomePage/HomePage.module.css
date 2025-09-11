@@ -31,13 +31,17 @@
         flex-direction: column;
         text-align: center;
     }
+    
+    .heroContent {
+        align-items: center;
+    }
 }
 
 .heroContent {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 24px;
 }
@@ -174,6 +178,42 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+.authButton {
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.authButton:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.buttonWrapper{
+    display: flex;
+    gap: 20px
+}
+
+@media screen and (max-width: 767px) {
+    .buttonWrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        align-self: center;
+    }
+    
+    .authButton {
+        width: 200px;
+        text-align: center;
+    }
+}
 .featureTitle {
     font-size: 22px;
     font-weight: 600;
