@@ -1,0 +1,170 @@
+.pageWrapper {
+    min-height: calc(100vh - 68px);
+    background-color: var(--second-white);
+    padding: 40px 0;
+}
+
+.recipeContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.recipeHeader {
+    padding: 40px;
+    background: linear-gradient(135deg, var(--green) 0%, #22a35a 100%);
+    color: white;
+    text-align: center;
+}
+
+.recipeTitle {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.recipeDescription {
+    font-size: 18px;
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.recipeInfo {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 24px;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.infoIcon {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .recipeHeader {
+        padding: 24px;
+    }
+    
+    .recipeTitle {
+        font-size: 28px;
+    }
+    
+    .recipeInfo {
+        gap: 20px;
+    }
+}
+
+.recipeContent {
+    padding: 40px;
+}
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sectionIcon {
+    font-size: 24px;
+}
+
+.ingredientsList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.ingredientItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.ingredientItem:last-child {
+    border-bottom: none;
+}
+
+.checkIcon {
+    color: var(--green);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.instructions {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--black);
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.difficultyBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+.difficultyEasy {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.difficultyMedium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.difficultyHard {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.loadingWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.errorMessage {
+    text-align: center;
+    padding: 40px;
+    color: #dc3545;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .recipeContent {
+        padding: 24px;
+    }
+    
+    .sectionTitle {
+        font-size: 20px;
+    }
+}
