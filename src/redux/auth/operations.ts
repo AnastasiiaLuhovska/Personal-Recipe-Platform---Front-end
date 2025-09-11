@@ -32,7 +32,6 @@ export const loginThunk = createAsyncThunk('login', async(userData:LoginFormValu
             email: userData.email
        }
     }catch (error) {
-       console.log(error)
        if (error instanceof AxiosError){
            return thunkAPI.rejectWithValue(error.response?.data.message);
        }

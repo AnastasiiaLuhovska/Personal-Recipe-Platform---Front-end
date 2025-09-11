@@ -11,13 +11,12 @@ import {refreshThunk} from "./redux/auth/operations.ts";
 import type {AppDispatch} from "./redux/store.ts";
 import {selectIsLoggedIn, selectIsRefreshing} from "./redux/auth/selectors.ts";
 import {Toaster} from 'react-hot-toast';
-import DescriptionPage from "./pages/DescriptionPage/DescriptionPage.tsx";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.tsx"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage.tsx"));
-// const DescriptionPage = lazy(
-//     () => import("./pages/DescriptionPage/DescriptionPage.tsx"),
-// );
+const DescriptionPage = lazy(
+    () => import("./pages/DescriptionPage/DescriptionPage.tsx"),
+);
 const NotFoundPage = lazy(
     () => import("./pages/NotFoundPage/NotFoundPage.tsx"),
 );

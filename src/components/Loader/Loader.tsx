@@ -9,7 +9,7 @@ const override = {
 const Loader = () => {
     return (
         <DotLoader
-            color="#ff0000"
+            color="#28a745"
             cssOverride={override}
             size={60}
             aria-label="Loading Spinner"

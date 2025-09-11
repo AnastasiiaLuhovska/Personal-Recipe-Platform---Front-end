@@ -1,0 +1,90 @@
+.notFoundWrapper {
+    min-height: calc(100vh - 68px);
+    background-color: var(--second-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.notFoundContainer {
+    max-width: 600px;
+    text-align: center;
+    background: white;
+    padding: 60px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.errorCode {
+    font-size: 120px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .errorCode {
+        font-size: 80px;
+    }
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 20px 0 16px 0;
+    line-height: 1.2;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+}
+
+.description {
+    font-size: 18px;
+    color: var(--black);
+    opacity: 0.7;
+    line-height: 1.5;
+    margin: 0 0 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .description {
+        font-size: 16px;
+    }
+}
+
+.homeButton {
+    background-color: var(--green);
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.homeButton:hover {
+    background-color: var(--green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(40, 167, 69, 0.3);
+}
+
+.homeButton:active {
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .notFoundContainer {
+        padding: 40px 24px;
+        margin: 0 16px;
+    }
+}
