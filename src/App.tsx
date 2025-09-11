@@ -11,6 +11,7 @@ import {refreshThunk} from "./redux/auth/operations.ts";
 import type {AppDispatch} from "./redux/store.ts";
 import {selectIsLoggedIn, selectIsRefreshing} from "./redux/auth/selectors.ts";
 import {Toaster} from 'react-hot-toast';
+import DescriptionPage from "./pages/DescriptionPage/DescriptionPage.tsx";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.tsx"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage.tsx"));
@@ -44,7 +45,7 @@ function App() {
                 <Route path='/register' element={<RestrictedRoute><RegisterPage/></RestrictedRoute>}/>
                 <Route path='/' element={<HomePage/>}/>
                 <Route path='/catalog' element={<PrivateRoute><CatalogPage/></PrivateRoute>}/>
-                {/*<Route path='/catalog/:id' element={<PrivateRoute><DescriptionPage/></PrivateRoute>}/>*/}
+                <Route path='/catalog/:recipeId' element={<PrivateRoute><DescriptionPage/></PrivateRoute>}/>
                 <Route path="*" element={<NotFoundPage/>}/>
             </Route>
         </Routes>

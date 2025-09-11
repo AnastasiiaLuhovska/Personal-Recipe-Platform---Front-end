@@ -26,10 +26,15 @@ export interface Recipe{
     ingredients: string[];
     instructions: string;
 }
+
+export interface RecipeWithId extends Recipe{
+    _id: string
+}
 export interface AddRecipeFormValues {
     error: string | null,
     isLoading: boolean,
-    recipes:Recipe[]
+    recipes:RecipeWithId[],
+    recipe: RecipeWithId
 
 }
 

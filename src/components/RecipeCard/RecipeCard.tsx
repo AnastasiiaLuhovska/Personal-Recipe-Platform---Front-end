@@ -1,13 +1,14 @@
-import type { Recipe } from "../../types/types";
+import type { RecipeWithId} from "../../types/types";
 import styles from "./RecipeCard.module.css";
+import {Link} from "react-router";
 
 interface RecipeCardProps {
-    recipe: Recipe;
+    recipe: RecipeWithId;
 }
 
 const RecipeCard = ({ recipe }: RecipeCardProps) => {
     return (
-        <div className={styles.card}>
+        <Link to={`/catalog/${recipe._id}`} className={styles.card}>
             <h3 className={styles.title}>{recipe.name}</h3>
             <p className={styles.description}>{recipe.description}</p>
             <div className={styles.info}>
@@ -20,7 +21,7 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
                     <span>{recipe.servings} portions</span>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

@@ -41,8 +41,8 @@
 }
 
 .input:focus {
-    border-color: var(--blue);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
 }
 
 .input::placeholder {
@@ -52,7 +52,7 @@
 
 .submitButton {
     padding: 14px 24px;
-    background-color: var(--blue);
+    background-color: var(--green);
     color: white;
     border: none;
     border-radius: 8px;
@@ -64,10 +64,10 @@
 }
 
 .submitButton:hover:not(:disabled) {
-    background-color: var(--blue);
+    background-color: var(--green-hover);
     opacity: 0.9;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
 }
 
 .submitButton:active:not(:disabled) {

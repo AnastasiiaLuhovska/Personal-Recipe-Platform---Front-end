@@ -13,7 +13,7 @@
 }
 
 .addButton {
-    background: #3182ce;
+    background: var(--green);
     color: white;
     border: none;
     padding: 12px 20px;
@@ -29,7 +29,7 @@
 }
 
 .addButton:hover {
-    background: #2c5aa0;
+    background: var(--green-hover);
 }
 
 @media (max-width: 768px) {

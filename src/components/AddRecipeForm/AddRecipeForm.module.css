@@ -86,8 +86,8 @@
 
 .input:focus, .select:focus, .textarea:focus {
     outline: none;
-    border-color: #3182ce;
-    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
 }
 
 .textarea {
@@ -132,7 +132,7 @@
 }
 
 .addButton {
-    background: #38a169;
+    background: var(--green);
     color: white;
     border: none;
     padding: 8px 16px;
@@ -144,7 +144,7 @@
 }
 
 .addButton:hover {
-    background: #2f855a;
+    background: var(--green-hover);
 }
 
 .buttonGroup {
@@ -173,7 +173,7 @@
 }
 
 .submitButton {
-    background: #3182ce;
+    background: var(--green);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -185,7 +185,7 @@
 }
 
 .submitButton:hover {
-    background: #2c5aa0;
+    background: var(--green-hover);
 }
 
 .submitButtonDisabled {

@@ -7,9 +7,10 @@ import styles from './Header.module.css';
 
 import type {AppDispatch} from "../../redux/store.ts";
 import {logoutThunk} from "../../redux/auth/operations.ts";
+import {selectIsLoggedIn} from "../../redux/auth/selectors.ts";
 
 const Header: React.FC = () => {
-    const isLoggedIn = useSelector((state: any) => state.auth.isLoggedIn);
+    const isLoggedIn = useSelector(selectIsLoggedIn);
     const location = useLocation();
     const dispatch = useDispatch<AppDispatch>();
     const [showDropdown, setShowDropdown] = useState(false);

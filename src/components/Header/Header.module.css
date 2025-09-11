@@ -44,7 +44,7 @@
 }
 
 .color {
-    color: var(--blue);
+    color: var(--green);
 }
 
 .navWrapper {
@@ -70,7 +70,7 @@
 }
 
 .navLink:hover {
-    color: var(--blue);
+    color: var(--green);
     background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -79,13 +79,13 @@
 }
 
 .navLink.active {
-    color: var(--blue);
+    color: var(--green);
 }
 
 .authButton {
     text-decoration: none;
     color: white;
-    background-color: var(--blue);
+    background-color: var(--green);
     font-weight: 500;
     font-size: 16px;
     line-height: 125%;
@@ -95,9 +95,10 @@
 }
 
 .authButton:hover {
+    background-color: var(--green-hover);
     opacity: 0.9;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
 }
 
 .settingsContainer {
@@ -117,7 +118,7 @@
 }
 
 .settingsButton:hover {
-    color: var(--blue);
+    color: var(--green);
     background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -163,7 +164,7 @@
 }
 
 .navLink:hover {
-    color: var(--blue);
+    color: var(--green);
     background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -172,5 +173,5 @@
 }
 
 .navLink.active {
-    color: var(--blue);
+    color: var(--green);
 }
